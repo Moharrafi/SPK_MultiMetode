@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Alternatif {
+  id        String      @id @default(cuid())
+  kode      String
+  nama      String
+  nomorHp   String?
+  alamat    String?
+  kategori  String?
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  penilaian Penilaian[]
+}
+
+model Kriteria {
+  id        String         @id @default(cuid())
+  kode      String
+  nama      String
+  bobot     Float
+  jenis     KriteriaJenis
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  sub       SubKriteria[]
+  penilaian Penilaian[]
+}
+
+model SubKriteria {
+  id         String   @id @default(cuid())
+  kriteriaId String
+  nama       String
+  nilai      Int
+
+  kriteria Kriteria @relation(fields: [kriteriaId], references: [id], onDelete: Cascade)
+}
+
+model Penilaian {
+  id           String    @id @default(cuid())
+  alternatifId String
+  kriteriaId   String
+  nilai        Int
+
+  alternatif Alternatif @relation(fields: [alternatifId], references: [id], onDelete: Cascade)
+  kriteria   Kriteria   @relation(fields: [kriteriaId], references: [id], onDelete: Cascade)
+
+  @@unique([alternatifId, kriteriaId])
+}
+
+model MetodeConfig {
+  id        String        @id @default(cuid())
+  nama      MetodeNama    @unique
+  aktif     Boolean       @default(true)
+  bobot     Float         @default(1)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model PairwiseComparison {
+  id          String   @id @default(cuid())
+  kriteria1Id String
+  kriteria2Id String
+  nilai       Float
+
+  @@unique([kriteria1Id, kriteria2Id])
+}
+
+model Setting {
+  key       String   @id
+  data      Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum KriteriaJenis {
+  benefit
+  cost
+}
+
+enum MetodeNama {
+  SAW
+  AHP
+  TOPSIS
+}

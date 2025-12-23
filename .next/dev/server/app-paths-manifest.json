@@ -1,0 +1,22 @@
+{
+  "/(dashboard)/dashboard/page": "app/(dashboard)/dashboard/page.js",
+  "/(dashboard)/data-master/alternatif/page": "app/(dashboard)/data-master/alternatif/page.js",
+  "/(dashboard)/data-master/kriteria/page": "app/(dashboard)/data-master/kriteria/page.js",
+  "/(dashboard)/data-master/skala/page": "app/(dashboard)/data-master/skala/page.js",
+  "/(dashboard)/data-master/sub-kriteria/page": "app/(dashboard)/data-master/sub-kriteria/page.js",
+  "/(dashboard)/hasil/gabungan/page": "app/(dashboard)/hasil/gabungan/page.js",
+  "/(dashboard)/hasil/perbandingan/page": "app/(dashboard)/hasil/perbandingan/page.js",
+  "/(dashboard)/laporan/page": "app/(dashboard)/laporan/page.js",
+  "/(dashboard)/metode/page": "app/(dashboard)/metode/page.js",
+  "/(dashboard)/pengaturan/page": "app/(dashboard)/pengaturan/page.js",
+  "/(dashboard)/pengguna/page": "app/(dashboard)/pengguna/page.js",
+  "/(dashboard)/penilaian/page": "app/(dashboard)/penilaian/page.js",
+  "/(dashboard)/perhitungan/ahp/page": "app/(dashboard)/perhitungan/ahp/page.js",
+  "/(dashboard)/perhitungan/saw/page": "app/(dashboard)/perhitungan/saw/page.js",
+  "/(dashboard)/perhitungan/topsis/page": "app/(dashboard)/perhitungan/topsis/page.js",
+  "/(dashboard)/profil/page": "app/(dashboard)/profil/page.js",
+  "/api/profile/[userId]/route": "app/api/profile/[userId]/route.js",
+  "/api/settings/route": "app/api/settings/route.js",
+  "/api/upload/route": "app/api/upload/route.js",
+  "/page": "app/page.js"
+}

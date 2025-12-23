@@ -1,0 +1,28 @@
+{
+  "dashboardWidgets": {
+    "statsCards": true,
+    "methodChart": true,
+    "quickActions": true,
+    "topRanking": true,
+    "recentActivity": true,
+    "systemStatus": true
+  },
+  "backupSettings": {
+    "enabled": true,
+    "frequency": "weekly",
+    "lastBackup": null,
+    "nextBackup": null
+  },
+  "reportSettings": {
+    "organizationName": "Sistem Pendukung Keputusan Multi Metode",
+    "location": "Jakarta",
+    "leaderName": "Nama Ketua",
+    "leaderTitle": "NIP. 123456789",
+    "logoUrl": "/uploads/logo-1766482393442-b8nj6y.png"
+  },
+  "appSettings": {
+    "appName": "SPK Multi-Metode",
+    "appSubtitle": "SAW | AHP | TOPSIS",
+    "appLogoUrl": "/uploads/logo-1766482389226-nh4e60.png"
+  }
+}

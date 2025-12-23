@@ -1,0 +1,3 @@
+{
+  "/api/metode-config/[nama]/route": "app/api/metode-config/[nama]/route.js"
+}
